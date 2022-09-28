@@ -1,0 +1,94 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">  
+    <meta name="robots" content="all,follow">
+    <title>Arete Human Resources</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="../../css/ionic.min.css" rel="stylesheet"/>
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand header-title">Arete Human Resources</a>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container centralize">
+        <div class="row">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <input type="file" id="myResume" accept=".txt,.doc,.docx,.pdf,.jpg">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input type="text" ng-model="fileName" placeholder="Your name here">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4>{{fileName}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <input type="file" id="myCover" accept=".txt,.doc,.docx,.pdf,.jpg">
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input type="text" ng-model="fileDesc" placeholder="Explanations">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h5>{{fileDesc}}</h5>
+            </div>
+        </div>
+        <hr>
+        <button type="submit" class="button button-outline button-positive" id="submitBTN" onclick="" style="float:right">Submit</button>
+        <div id="displayResume"></div>
+    </div>
+
+    <iframe id="input" src="sample.pdf"></iframe>
+    <iframe id="processor" src="http://hubgit.github.com/2011/11/pdftotext/"></iframe>
+    <div id="output"></div>
+
+    <script>
+    var input = document.getElementById("input");
+    var processor = document.getElementById("processor");
+    var output = document.getElementById("output");
+
+    // listen for messages from the processor
+    window.addEventListener("message", function(event){
+      if (event.source != processor.contentWindow) return;
+
+      switch (event.data){
+        // "ready" = the processor is ready, so fetch the PDF file
+        case "ready":
+          var xhr = new XMLHttpRequest;
+          xhr.open('GET', input.getAttribute("src"), true);
+          xhr.responseType = "arraybuffer";
+          xhr.onload = function(event) {
+            processor.contentWindow.postMessage(this.response, "*");
+          };
+          xhr.send();
+        break;
+
+        // anything else = the processor has returned the text of the PDF
+        default:
+          output.textContent = event.data.replace(/\s+/g, " ");
+        break;
+      }
+    }, true);
+    </script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="../../js/ionic.min.js" type="text/javascript"></script>
+    <script src="../../js/ionic.bundle.min.js" type="text/javascript"></script>
+    <script src="../../js/ionic-angular.min.js" type="text/javascript"></script>
+    <script src='../../js/pdf.js'></script>
+    <script src='../../js/pdf.worker.js'></script>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

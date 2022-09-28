@@ -1,0 +1,21 @@
+{
+    "name": "file_upload",
+    "description": "",
+    "keywords": ["PDF", "text", "parser", "parse", "extract"],
+    "type": "library",
+    "license": "LGPLv3",
+    "authors": [
+        {
+            "name": "Erhan Yaşar",
+            "email": "mail@erhanyasar.com.tr"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/smalot/pdfparser/issues"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "tecnickcom/tcpdf": "~6.0",
+        "smalot/pdfparser": "*"
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Erhan Yaşar | UI/UX Designer &amp; Frontend Developer</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link href="assets/css/ionic.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="arka_fon">
+    <div class="container login_bosluk">
+        <div class="bar bar-header login_header">
+            <div class="page_header " data-role="header" data-position="fixed">
+                <h1 class="title"><img width="35" class="header_logo" src="images/header_logo.png"> KNX SERVER</h1>
+            </div>
+        </div>
+        <form method="post" action="/" id="loginForm" onsubmit="validate(); return false;">
+            <div class="list">
+                <label class="item item-input">
+    			<span class="input-label">Username</span>
+    			<input type="text" id="username" name="username">
+  			</label>
+                <label class="item item-input" id="password">
+    			<span class="input-label">Password</span>
+    			<input type="password" name="password">
+        	</label>
+            </div>
+            <ul class="list">
+                <li class="item item-toggle" id="rememberMe">
+                    Beni Hatırla
+                    <label class="toggle toggle-assertive">
+					<input type="checkbox" value="1">
+					<div class="track">
+         				<div class="handle"></div>
+       				</div>
+     			</label>
+                </li>
+                <li class="item item-toggle">
+                    Şifremi Unuttum
+                    <label class="toggle toggle-assertive">
+					<input id="forgotPass" type="checkbox" value="1" onchange="hidePassword();">
+					<div class="track">
+         				<div class="handle"></div>
+       				</div>
+     			</label>
+                </li>
+            </ul>
+            <button type="submit" class="button button-block button-positive activated login" onclick="">LOGIN</button>
+        </form>
+        <div class="bar bar-footer copyright">
+            <div class="title">All rights reserved &copy;
+                <a href="http://www.zetteknoloji.com"><img width="35" class="header_logo" src="images/header_logo.png" /></a> 2013</div>
+        </div>
+    </div>
+</body>
+<script src="assets/js/ionic.bundle.min.js" type="text/javascript"></script>
+<script src="assets/js/ionic.min.js" type="text/javascript"></script>
+<script src="assets/js/ionic-angular.min.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script>
+
+</html>

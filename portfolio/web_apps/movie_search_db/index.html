@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Erhan Yaşar | Frontend Developer &amp; UI/UX Designer</title>
+    <link rel="shortcut icon" href="img/avatar.png" />
+    
+    <!-- CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="css/main.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <!-- /CSS -->
+</head>
+
+<body>
+    <!-- Page preloader -->
+    <div class="page-preloader" style="min-height:900px;">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!-- /Page preloader -->
+
+    <!-- Header -->
+    <header id="ui-header" class="ui-header">
+        <div class="ui-header-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-5 col-lg-2">
+                        <h1 class="ui-logo"><a href="#" rel="logo"></a></h1>
+                    </div>
+                    <div class="col-xs-3 col-lg-8 pull-right">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-hero">
+            <p class="hero-dynamics"> <span class="hero-rotate-text" id="herorotatetext"> <i class="show">&middot; flexible &amp; scalable &middot;</i> <i>&middot; customizable &amp; simple &middot;</i> <i>&middot; responsive &amp; lightweight &middot;</i> </span> </p>
+            <p class="hero-statics">web development</p>
+        </div>
+        <a href="#ui-main" class="ui-scroller header"></a><canvas id="xmas" class="xmas"></canvas></header>
+    <!-- /Header -->
+
+    <!-- Caption -->
+    <nav class="navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a class="navbar-brand">Welcome to Movie Search Database Platform</a>
+            <a href="http://tazebt.com" target="_blank" class="sitelogo-taze" style="background-image: url('img/tazebt.svg');"></a>
+        </div>
+    </nav>
+    <!-- /Caption -->
+    
+    <!-- Search -->
+    <div class="row centralize">
+      <div class="col-lg-6">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search in Movies...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Search!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- /Search -->
+
+    <!-- Search Results -->
+    <div class="container centralize" id="search-results">
+        <table class="table table-bordered table-condensed table-striped table-hover">
+        	<thead>
+                <tr>
+				    <th>
+                        #
+					</th>
+					<th>
+                        Film Adı
+                    </th>
+                    <th>
+                        Çıkış Tarihi
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+				<tr>
+                    <td>
+							1
+                    </td>
+                    <td>
+                        Beyaz Eşya
+                    </td>
+                    <td>
+                        Beyaz Eşya
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        Beyaz Eşya
+                    </td>                    
+                    <td>
+                        Mutfak
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- /Search Results -->
+    
+    <!-- Footer -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="http://www.erhanyasar.com.tr" target="_blank" class="footer" >www.erhanyasar.com.tr</a>
+        </div>
+    </nav>
+    <!-- /Footer -->
+
+    <!-- Js -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Source+Sans+Pro:400,200,300,600:latin,latin-ext']
+            }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/build.js" async defer></script>
+    <script src="js/main.js"></script>
+    <!-- /Js -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title id='Description'>Erhan Yaşar | Frontend Developer &amp; UI/UX Designer</title>
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxdraw.js"></script>
+    <script type="text/javascript" src="jqwidgets/jqxchart.core.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var adapterSettings = {
+               datatype: "json",
+               datafields: [
+                   { name: 'Index1' },
+                   { name: 'SerieA' },
+                   { name: 'SerieB' },
+                   { name: 'SerieC' },
+                   { name: 'SerieD' }
+               ],
+               url: 'data.txt'
+           };
+
+            var dataAdapter = new $.jqx.dataAdapter(adapterSettings, { async: false, autoBind: true, loadError: function (xhr, status, error) { alert('Error loading : ' + error); } });
+
+            var settings = {
+                title: "Stacked Column Chart",
+                description: "Selectable & Negatives inc.",
+                enableAnimations: false,
+                showLegend: true,
+                padding: { left: 15, top: 15, right: 15, bottom: 15 },
+                titlePadding: { left: 90, top: 0, right: 0, bottom: 10 },
+                source: dataAdapter,
+                xAxis: {
+                    dataField: 'Index',
+                    tickMarks: {
+                        visible: true,
+                        interval: 1
+                    },
+                    gridLines: {
+                        visible: true,
+                        interval: 1
+                    }
+                },
+                valueAxis: {
+                    labels: { horizontalAlignment: 'right' }
+                },
+                colorScheme: 'scheme02',
+                seriesGroups: [
+                    {
+                        type: 'stackedcolumn',
+                        columnsGapPercent: 50,
+                        seriesGapPercent: 0,
+                        columnsTopWidthPercent: 100,
+                        columnsBottomWidthPercent: 100,
+                        series: [
+                            { dataField: 'SerieA', displayText: 'A', labels: { visible: true } },
+                            { dataField: 'SerieB', displayText: 'B', labels: { visible: true } },
+                            { dataField: 'SerieC', displayText: 'C', labels: { visible: true } },
+                            { dataField: 'SerieD', displayText: 'D', labels: { visible: true } }
+                        ]
+                    }
+                ]
+            };
+
+            $('#chartContainer').jqxChart(settings);
+        });
+    </script>
+    <style type="text/css">
+        #chartContainer{
+            background: url("bg.jpg");
+        }
+    </style>
+</head>
+<body class='default'>
+    <div id='chartContainer' style="width:1900px; height:1080px;" />
+</body>
+</html>

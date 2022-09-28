@@ -1,0 +1,33 @@
+<input type="file" id="file" name="file">
+
+<button id="readFile">Read File</button>
+<output id="content"></output>
+
+<script>
+    if (window.File && window.FileList && window.FileReader) {
+        function readFile() {
+            /* Get the reference of the inpout element. */
+            var files = document.getElementById('file').files;
+
+            if (!files.length) {
+                alert('Please select a file!');
+                return;
+            }
+            /* Reading the first file selected. You can process other files similarly in loop. */
+            var file = files[0];
+            /* Instantiate the File Reader object. */
+            var reader = new FileReader();
+            /* onLoad event is fired when the load completes. */
+            reader.onload = function(event) {
+                document.getElementById('content').textContent = event.target.result;
+            };
+            /* The readAsText method will read the file's data as a text string. By default the string is decoded as 'UTF-8'. */
+            reader.readAsText(file);
+        }
+        document.getElementById('readFile').addEventListener('click', function(event) {
+            readFile();
+        }, false);
+    } else {
+        alert('Sorry! your browser does not support HTML5 File APIs.');
+    }
+</script>

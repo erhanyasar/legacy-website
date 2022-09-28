@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Erhan Yaşar | Barcode Reader</title>
+    <script src="jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" charset="utf-8">
+        function tryAppStore() {
+            setTimeout(function() {
+                window.location = "https://appsto.re/tr/6XPCz.i";
+            }, 25);
+            window.location = "Barcode://scan/";
+        }
+
+        function tryGoogleStore() {
+            setTimeout(function() {
+                window.location = "https://play.google.com/store/apps/details?id=com.google.zxing.client.android&hl=en";
+            }, 25);
+            window.location = "zxing://scan/";
+        }
+
+        function GetURLParameter(sParam) {
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam) {
+                    return sParameterName[1];
+                }
+            }
+        }
+
+        alert ("Before start, You should be aware that user has to choose 'Send Barcode to Web Server' from the Barcode App's Settings and type the URL as below: 'http://www.erhanyasar.com.tr/portfolio/web/app/barcode_reader/barcode=[code]'");
+
+        if (window.navigator.userAgent.indexOf('iPhone') != -1) {
+            tryAppStore();
+        } else if (window.navigator.userAgent.indexOf('Android') != -1) {
+            tryGoogleStore();
+        } else {
+            alert("Please use an iOS or Android to be able to use.");
+        };
+
+        var barcode = GetURLParameter('barcode');
+
+    </script>
+</body>
+
+</html>

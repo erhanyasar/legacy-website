@@ -1,0 +1,97 @@
+<!doctype html>
+<html ng-app="ulkeBolgeSehir">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Lostar | Frontend Challange with Angular.js by Erhan Yaşar">
+    <title>Erhan Yaşar | Angular Dropdown</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <!-- /CSS -->
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand site-logo">ng-dropdown with Angular.js</a>
+            </div>
+        </div>
+    </nav>
+    <!-- /Header -->
+
+    <!-- ngReady -->
+    <div ng-controller="ngReady">
+        <!-- Form -->
+        <div class="container content centralize">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-7 col-lg-offset-2">
+                            <h2>Hoşgeldiniz</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-7 col-lg-offset-2">
+                            <select class="form-control input-sm" ng-model="selectCountry" ng-options="ctry as ctry.country for ctry in countries">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-7 col-lg-offset-2">
+                            <select class="form-control input-sm" ng-model="selectRegion" ng-options="reg as reg[selectCountry.displayRegions] for reg in selectCountry.data">
+                                <option value="">Select Region</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-7 col-lg-offset-2">
+                            <select class="form-control input-sm" ng-model="selectCity" ng-options="city for city in selectRegion.Cities">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-offset-3 col-sm-2 col-md-3 col-lg-5">
+                            <div class="checkbox">
+                                <label><a href="index.html" class="cancel-btn">İptal</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- /Form -->
+
+        <!-- Test -->
+        <div class="ngReady">
+            {{ test | change }}
+        </div>
+        <!-- /Test -->
+
+    </div>
+    <!-- /ngReady -->
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <!-- /JS -->
+</body>
+
+</html>

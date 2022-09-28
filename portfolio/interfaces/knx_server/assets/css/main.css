@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.arka_fon {
+    background-color: #444;
+}
+.container {
+    margin: 50px;
+}
+.bar .title {
+    font-size: 22px;
+    font-family: helvetica;
+}
+.bar .title img {
+    width: 50px;
+    margin-top: 10px;
+}
+.login_header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 0px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+.index_header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 0px solid #000000;
+    border-bottom: 1px solid #000000;
+    position: relative;
+}
+.login_bosluk {
+    margin-top: 100px;
+}
+.copyright {
+    background-color: #FFFFFF;
+    font-style: italic;
+}
+.toggle.toggle-assertive input:checked+.track {
+    background-color: green;
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        margin: 50px auto;
+        width: 768px;
+    }
+}

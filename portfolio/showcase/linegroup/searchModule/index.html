@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InLine Embedded Modules Showcase</title>
+  </head>
+  <body>
+    <!--
+    <input type="number" id="counter">
+    <button type="submit" onClick="buildTestEnv()"></button>
+    -->
+    <div id="searchModule"></div>
+    <script type="text/javascript">
+      var hotelID=51,
+          formFeatureID=1;
+
+      (function(){
+        var script_1 = document.createElement("script"),
+            script_0 = document.getElementsByTagName("script")[0];
+        script_1.async=true;
+        script_1.src='searchModule.js';
+        script_1.charset='UTF-8';
+        script_1.setAttribute('crossorigin','*');
+        script_0.parentNode.insertAdjacentElement('beforeend', script_1);
+      })();
+    </script>
+  </body>
+</html>

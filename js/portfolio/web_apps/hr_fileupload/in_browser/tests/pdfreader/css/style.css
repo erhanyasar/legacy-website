@@ -1,0 +1,25 @@
+.centralize {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 250px;
+}
+#displayResume {
+    margin-top: 2em;
+    width: 100%;
+    overflow-x: auto;
+}
+.header-title {
+    float: none !important;
+    color: #FFF !important;
+    text-align: center;
+    width: 100%;
+}
+.navbar-header {
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+#submitBTN {
+    float: right;
+}

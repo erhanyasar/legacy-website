@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Kontrol Takip - Ofis</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Daily Table -->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+                <h3>
+                    <center aria-valuetext>DAILY</center>
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="centralize">MASTER</th>
+                            <th class="centralize">C / O</th>
+                            <th class="centralize">2 / O</th>
+                            <th class="centralize">3 / O</th>
+                            <th class="centralize">C / E</th>
+                            <th class="centralize">1 / E</th>
+                            <th class="centralize">2 / E</th>
+                            <th class="centralize">E / O</th>
+                        </tr>
+                    </thead>
+                    <tbody class="centralize">
+                        <tr>
+                            <td class="header">M/V ZEYNEP KIRAN</td>
+                            <td class="default" id="id1"></td>
+                            <td class="default" id="id2"></td>
+                            <td class="default" id="id3"></td>
+                            <td class="default" id="id4"></td>
+                            <td class="default" id="id5"></td>
+                            <td class="default" id="id6"></td>
+                            <td class="default" id="id7"></td>
+                            <td class="default" id="id8"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ASYA</td>
+                            <td class="default" id="id9">3</td>
+                            <td class="default" id="id10"></td>
+                            <td class="default" id="id11"></td>
+                            <td class="default" id="id12"></td>
+                            <td class="default" id="id13"></td>
+                            <td class="default" id="id14"></td>
+                            <td class="default" id="id15"></td>
+                            <td class="default" id="id16"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V TK ROTTERDAM</td>
+                            <td class="default" id="id17"></td>
+                            <td class="default" id="id18"></td>
+                            <td class="default" id="id19"></td>
+                            <td class="default" id="id20"></td>
+                            <td class="default" id="id21"></td>
+                            <td class="default" id="id22"></td>
+                            <td class="default" id="id23"></td>
+                            <td class="default" id="id24"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EUROPE</td>
+                            <td class="default" id="id25"></td>
+                            <td class="default" id="id26"></td>
+                            <td class="default" id="id27"></td>
+                            <td class="default" id="id28"></td>
+                            <td class="default" id="id29"></td>
+                            <td class="default" id="id30"></td>
+                            <td class="default" id="id31"></td>
+                            <td class="default" id="id32"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AMERICA</td>
+                            <td class="default" id="id33"></td>
+                            <td class="default" id="id34"></td>
+                            <td class="default" id="id35"></td>
+                            <td class="default" id="id36"></td>
+                            <td class="default" id="id37"></td>
+                            <td class="default" id="id38">4</td>
+                            <td class="default" id="id39"></td>
+                            <td class="default" id="id40"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AFRICA</td>
+                            <td class="default" id="id41"></td>
+                            <td class="default" id="id42"></td>
+                            <td class="default" id="id43"></td>
+                            <td class="default" id="id44">2</td>
+                            <td class="default" id="id45"></td>
+                            <td class="default" id="id46"></td>
+                            <td class="default" id="id47"></td>
+                            <td class="default" id="id48"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN TURKIYE</td>
+                            <td class="default" id="id49"></td>
+                            <td class="default" id="id50"></td>
+                            <td class="default" id="id51"></td>
+                            <td class="default" id="id52"></td>
+                            <td class="default" id="id53"></td>
+                            <td class="default" id="id54"></td>
+                            <td class="default" id="id55"></td>
+                            <td class="default" id="id56"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EURASIA</td>
+                            <td class="default" id="id57"></td>
+                            <td class="default" id="id58"></td>
+                            <td class="default" id="id59"></td>
+                            <td class="default" id="id60"></td>
+                            <td class="default" id="id61"></td>
+                            <td class="default" id="id62"></td>
+                            <td class="default" id="id63"></td>
+                            <td class="default" id="id64"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ANATOLIA</td>
+                            <td class="default" id="id65"></td>
+                            <td class="default" id="id66"></td>
+                            <td class="default" id="id67"></td>
+                            <td class="default" id="id68"></td>
+                            <td class="default" id="id69"></td>
+                            <td class="default" id="id70"></td>
+                            <td class="default" id="id71"></td>
+                            <td class="default" id="id72"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AUSTRALIA</td>
+                            <td class="default" id="id73"></td>
+                            <td class="default" id="id74">1</td>
+                            <td class="default" id="id75"></td>
+                            <td class="default" id="id76"></td>
+                            <td class="default" id="id77"></td>
+                            <td class="default" id="id78"></td>
+                            <td class="default" id="id79"></td>
+                            <td class="default" id="id80"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ISTANBUL</td>
+                            <td class="default" id="id81"></td>
+                            <td class="default" id="id82"></td>
+                            <td class="default" id="id83"></td>
+                            <td class="default" id="id84"></td>
+                            <td class="default" id="id85"></td>
+                            <td class="default" id="id86"></td>
+                            <td class="default" id="id87"></td>
+                            <td class="default" id="id88"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN MARMARA</td>
+                            <td class="default" id="id89"></td>
+                            <td class="default" id="id90"></td>
+                            <td class="default" id="id91"></td>
+                            <td class="default" id="id92"></td>
+                            <td class="default" id="id93"></td>
+                            <td class="default" id="id94"></td>
+                            <td class="default" id="id95"></td>
+                            <td class="default" id="id96"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CHINA</td>
+                            <td class="default" id="id97"></td>
+                            <td class="default" id="id98"></td>
+                            <td class="default" id="id99"></td>
+                            <td class="default" id="id100"></td>
+                            <td class="default" id="id101"></td>
+                            <td class="default" id="id102"></td>
+                            <td class="default" id="id103"></td>
+                            <td class="default" id="id104"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN BOSPHORUS</td>
+                            <td class="default" id="id105"></td>
+                            <td class="default" id="id106">1</td>
+                            <td class="default" id="id107"></td>
+                            <td class="default" id="id108"></td>
+                            <td class="default" id="id109"></td>
+                            <td class="default" id="id110"></td>
+                            <td class="default" id="id111"></td>
+                            <td class="default" id="id112"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ADRIATIC</td>
+                            <td class="default" id="id113"></td>
+                            <td class="default" id="id114"></td>
+                            <td class="default" id="id115"></td>
+                            <td class="default" id="id116"></td>
+                            <td class="default" id="id117"></td>
+                            <td class="default" id="id118"></td>
+                            <td class="default" id="id119">3</td>
+                            <td class="default" id="id120"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CARIBBEAN</td>
+                            <td class="default" id="id121"></td>
+                            <td class="default" id="id122"></td>
+                            <td class="default" id="id123"></td>
+                            <td class="default" id="id124"></td>
+                            <td class="default" id="id125"></td>
+                            <td class="default" id="id126"></td>
+                            <td class="default" id="id127"></td>
+                            <td class="default" id="id128"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CASPIAN</td>
+                            <td class="default" id="id129"></td>
+                            <td class="default" id="id130"></td>
+                            <td class="default" id="id131"></td>
+                            <td class="default" id="id132"></td>
+                            <td class="default" id="id133"></td>
+                            <td class="default" id="id134"></td>
+                            <td class="default" id="id135"></td>
+                            <td class="default" id="id136">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /Daily Table -->
+
+    <!-- Weekly Table -->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+                <h3>
+                    <center aria-valuetext>WEEKLY</center>
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="centralize">MASTER</th>
+                            <th class="centralize">C / O</th>
+                            <th class="centralize">2 / O</th>
+                            <th class="centralize">3 / O</th>
+                            <th class="centralize">C / E</th>
+                            <th class="centralize">1 / E</th>
+                            <th class="centralize">2 / E</th>
+                            <th class="centralize">E / O</th>
+                        </tr>
+                    </thead>
+                    <tbody class="centralize">
+                        <tr>
+                            <td class="header">M/V ZEYNEP KIRAN</td>
+                            <td class="default" id="id1"></td>
+                            <td class="default" id="id2"></td>
+                            <td class="default" id="id3"></td>
+                            <td class="default" id="id4"></td>
+                            <td class="default" id="id5"></td>
+                            <td class="default" id="id6"></td>
+                            <td class="default" id="id7"></td>
+                            <td class="default" id="id8"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ASYA</td>
+                            <td class="default" id="id9">3</td>
+                            <td class="default" id="id10"></td>
+                            <td class="default" id="id11"></td>
+                            <td class="default" id="id12"></td>
+                            <td class="default" id="id13"></td>
+                            <td class="default" id="id14"></td>
+                            <td class="default" id="id15"></td>
+                            <td class="default" id="id16"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V TK ROTTERDAM</td>
+                            <td class="default" id="id17"></td>
+                            <td class="default" id="id18"></td>
+                            <td class="default" id="id19"></td>
+                            <td class="default" id="id20"></td>
+                            <td class="default" id="id21"></td>
+                            <td class="default" id="id22"></td>
+                            <td class="default" id="id23"></td>
+                            <td class="default" id="id24"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EUROPE</td>
+                            <td class="default" id="id25"></td>
+                            <td class="default" id="id26"></td>
+                            <td class="default" id="id27"></td>
+                            <td class="default" id="id28"></td>
+                            <td class="default" id="id29"></td>
+                            <td class="default" id="id30"></td>
+                            <td class="default" id="id31"></td>
+                            <td class="default" id="id32"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AMERICA</td>
+                            <td class="default" id="id33"></td>
+                            <td class="default" id="id34"></td>
+                            <td class="default" id="id35"></td>
+                            <td class="default" id="id36"></td>
+                            <td class="default" id="id37"></td>
+                            <td class="default" id="id38">4</td>
+                            <td class="default" id="id39"></td>
+                            <td class="default" id="id40"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AFRICA</td>
+                            <td class="default" id="id41"></td>
+                            <td class="default" id="id42"></td>
+                            <td class="default" id="id43"></td>
+                            <td class="default" id="id44">2</td>
+                            <td class="default" id="id45"></td>
+                            <td class="default" id="id46"></td>
+                            <td class="default" id="id47"></td>
+                            <td class="default" id="id48"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN TURKIYE</td>
+                            <td class="default" id="id49"></td>
+                            <td class="default" id="id50"></td>
+                            <td class="default" id="id51"></td>
+                            <td class="default" id="id52"></td>
+                            <td class="default" id="id53"></td>
+                            <td class="default" id="id54"></td>
+                            <td class="default" id="id55"></td>
+                            <td class="default" id="id56"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EURASIA</td>
+                            <td class="default" id="id57"></td>
+                            <td class="default" id="id58"></td>
+                            <td class="default" id="id59"></td>
+                            <td class="default" id="id60"></td>
+                            <td class="default" id="id61"></td>
+                            <td class="default" id="id62"></td>
+                            <td class="default" id="id63"></td>
+                            <td class="default" id="id64"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ANATOLIA</td>
+                            <td class="default" id="id65"></td>
+                            <td class="default" id="id66"></td>
+                            <td class="default" id="id67"></td>
+                            <td class="default" id="id68"></td>
+                            <td class="default" id="id69"></td>
+                            <td class="default" id="id70"></td>
+                            <td class="default" id="id71"></td>
+                            <td class="default" id="id72"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AUSTRALIA</td>
+                            <td class="default" id="id73"></td>
+                            <td class="default" id="id74">1</td>
+                            <td class="default" id="id75"></td>
+                            <td class="default" id="id76"></td>
+                            <td class="default" id="id77"></td>
+                            <td class="default" id="id78"></td>
+                            <td class="default" id="id79"></td>
+                            <td class="default" id="id80"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ISTANBUL</td>
+                            <td class="default" id="id81"></td>
+                            <td class="default" id="id82"></td>
+                            <td class="default" id="id83"></td>
+                            <td class="default" id="id84"></td>
+                            <td class="default" id="id85"></td>
+                            <td class="default" id="id86"></td>
+                            <td class="default" id="id87"></td>
+                            <td class="default" id="id88"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN MARMARA</td>
+                            <td class="default" id="id89"></td>
+                            <td class="default" id="id90"></td>
+                            <td class="default" id="id91"></td>
+                            <td class="default" id="id92"></td>
+                            <td class="default" id="id93"></td>
+                            <td class="default" id="id94"></td>
+                            <td class="default" id="id95"></td>
+                            <td class="default" id="id96"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CHINA</td>
+                            <td class="default" id="id97"></td>
+                            <td class="default" id="id98"></td>
+                            <td class="default" id="id99"></td>
+                            <td class="default" id="id100"></td>
+                            <td class="default" id="id101"></td>
+                            <td class="default" id="id102"></td>
+                            <td class="default" id="id103"></td>
+                            <td class="default" id="id104"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN BOSPHORUS</td>
+                            <td class="default" id="id105"></td>
+                            <td class="default" id="id106">1</td>
+                            <td class="default" id="id107"></td>
+                            <td class="default" id="id108"></td>
+                            <td class="default" id="id109"></td>
+                            <td class="default" id="id110"></td>
+                            <td class="default" id="id111"></td>
+                            <td class="default" id="id112"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ADRIATIC</td>
+                            <td class="default" id="id113"></td>
+                            <td class="default" id="id114"></td>
+                            <td class="default" id="id115"></td>
+                            <td class="default" id="id116"></td>
+                            <td class="default" id="id117"></td>
+                            <td class="default" id="id118"></td>
+                            <td class="default" id="id119">3</td>
+                            <td class="default" id="id120"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CARIBBEAN</td>
+                            <td class="default" id="id121"></td>
+                            <td class="default" id="id122"></td>
+                            <td class="default" id="id123"></td>
+                            <td class="default" id="id124"></td>
+                            <td class="default" id="id125"></td>
+                            <td class="default" id="id126"></td>
+                            <td class="default" id="id127"></td>
+                            <td class="default" id="id128"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CASPIAN</td>
+                            <td class="default" id="id129"></td>
+                            <td class="default" id="id130"></td>
+                            <td class="default" id="id131"></td>
+                            <td class="default" id="id132"></td>
+                            <td class="default" id="id133"></td>
+                            <td class="default" id="id134"></td>
+                            <td class="default" id="id135"></td>
+                            <td class="default" id="id136">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /Weekly Table -->
+
+    <!-- /Monthly Table -->
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+                <h3>
+                    <center aria-valuetext>MONTHLY</center>
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="centralize">MASTER</th>
+                            <th class="centralize">C / O</th>
+                            <th class="centralize">2 / O</th>
+                            <th class="centralize">3 / O</th>
+                            <th class="centralize">C / E</th>
+                            <th class="centralize">1 / E</th>
+                            <th class="centralize">2 / E</th>
+                            <th class="centralize">E / O</th>
+                        </tr>
+                    </thead>
+                    <tbody class="centralize">
+                        <tr>
+                            <td class="header">M/V ZEYNEP KIRAN</td>
+                            <td class="default" id="id1"></td>
+                            <td class="default" id="id2"></td>
+                            <td class="default" id="id3"></td>
+                            <td class="default" id="id4"></td>
+                            <td class="default" id="id5"></td>
+                            <td class="default" id="id6"></td>
+                            <td class="default" id="id7"></td>
+                            <td class="default" id="id8"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ASYA</td>
+                            <td class="default" id="id9">3</td>
+                            <td class="default" id="id10"></td>
+                            <td class="default" id="id11"></td>
+                            <td class="default" id="id12"></td>
+                            <td class="default" id="id13"></td>
+                            <td class="default" id="id14"></td>
+                            <td class="default" id="id15"></td>
+                            <td class="default" id="id16"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V TK ROTTERDAM</td>
+                            <td class="default" id="id17"></td>
+                            <td class="default" id="id18"></td>
+                            <td class="default" id="id19"></td>
+                            <td class="default" id="id20"></td>
+                            <td class="default" id="id21"></td>
+                            <td class="default" id="id22"></td>
+                            <td class="default" id="id23"></td>
+                            <td class="default" id="id24"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EUROPE</td>
+                            <td class="default" id="id25"></td>
+                            <td class="default" id="id26"></td>
+                            <td class="default" id="id27"></td>
+                            <td class="default" id="id28"></td>
+                            <td class="default" id="id29"></td>
+                            <td class="default" id="id30"></td>
+                            <td class="default" id="id31"></td>
+                            <td class="default" id="id32"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AMERICA</td>
+                            <td class="default" id="id33"></td>
+                            <td class="default" id="id34"></td>
+                            <td class="default" id="id35"></td>
+                            <td class="default" id="id36"></td>
+                            <td class="default" id="id37"></td>
+                            <td class="default" id="id38">4</td>
+                            <td class="default" id="id39"></td>
+                            <td class="default" id="id40"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AFRICA</td>
+                            <td class="default" id="id41"></td>
+                            <td class="default" id="id42"></td>
+                            <td class="default" id="id43"></td>
+                            <td class="default" id="id44">2</td>
+                            <td class="default" id="id45"></td>
+                            <td class="default" id="id46"></td>
+                            <td class="default" id="id47"></td>
+                            <td class="default" id="id48"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN TURKIYE</td>
+                            <td class="default" id="id49"></td>
+                            <td class="default" id="id50"></td>
+                            <td class="default" id="id51"></td>
+                            <td class="default" id="id52"></td>
+                            <td class="default" id="id53"></td>
+                            <td class="default" id="id54"></td>
+                            <td class="default" id="id55"></td>
+                            <td class="default" id="id56"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN EURASIA</td>
+                            <td class="default" id="id57"></td>
+                            <td class="default" id="id58"></td>
+                            <td class="default" id="id59"></td>
+                            <td class="default" id="id60"></td>
+                            <td class="default" id="id61"></td>
+                            <td class="default" id="id62"></td>
+                            <td class="default" id="id63"></td>
+                            <td class="default" id="id64"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ANATOLIA</td>
+                            <td class="default" id="id65"></td>
+                            <td class="default" id="id66"></td>
+                            <td class="default" id="id67"></td>
+                            <td class="default" id="id68"></td>
+                            <td class="default" id="id69"></td>
+                            <td class="default" id="id70"></td>
+                            <td class="default" id="id71"></td>
+                            <td class="default" id="id72"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN AUSTRALIA</td>
+                            <td class="default" id="id73"></td>
+                            <td class="default" id="id74">1</td>
+                            <td class="default" id="id75"></td>
+                            <td class="default" id="id76"></td>
+                            <td class="default" id="id77"></td>
+                            <td class="default" id="id78"></td>
+                            <td class="default" id="id79"></td>
+                            <td class="default" id="id80"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ISTANBUL</td>
+                            <td class="default" id="id81"></td>
+                            <td class="default" id="id82"></td>
+                            <td class="default" id="id83"></td>
+                            <td class="default" id="id84"></td>
+                            <td class="default" id="id85"></td>
+                            <td class="default" id="id86"></td>
+                            <td class="default" id="id87"></td>
+                            <td class="default" id="id88"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN MARMARA</td>
+                            <td class="default" id="id89"></td>
+                            <td class="default" id="id90"></td>
+                            <td class="default" id="id91"></td>
+                            <td class="default" id="id92"></td>
+                            <td class="default" id="id93"></td>
+                            <td class="default" id="id94"></td>
+                            <td class="default" id="id95"></td>
+                            <td class="default" id="id96"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CHINA</td>
+                            <td class="default" id="id97"></td>
+                            <td class="default" id="id98"></td>
+                            <td class="default" id="id99"></td>
+                            <td class="default" id="id100"></td>
+                            <td class="default" id="id101"></td>
+                            <td class="default" id="id102"></td>
+                            <td class="default" id="id103"></td>
+                            <td class="default" id="id104"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN BOSPHORUS</td>
+                            <td class="default" id="id105"></td>
+                            <td class="default" id="id106">1</td>
+                            <td class="default" id="id107"></td>
+                            <td class="default" id="id108"></td>
+                            <td class="default" id="id109"></td>
+                            <td class="default" id="id110"></td>
+                            <td class="default" id="id111"></td>
+                            <td class="default" id="id112"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN ADRIATIC</td>
+                            <td class="default" id="id113"></td>
+                            <td class="default" id="id114"></td>
+                            <td class="default" id="id115"></td>
+                            <td class="default" id="id116"></td>
+                            <td class="default" id="id117"></td>
+                            <td class="default" id="id118"></td>
+                            <td class="default" id="id119">3</td>
+                            <td class="default" id="id120"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CARIBBEAN</td>
+                            <td class="default" id="id121"></td>
+                            <td class="default" id="id122"></td>
+                            <td class="default" id="id123"></td>
+                            <td class="default" id="id124"></td>
+                            <td class="default" id="id125"></td>
+                            <td class="default" id="id126"></td>
+                            <td class="default" id="id127"></td>
+                            <td class="default" id="id128"></td>
+                        </tr>
+                        <tr>
+                            <td class="header">M/V KIRAN CASPIAN</td>
+                            <td class="default" id="id129"></td>
+                            <td class="default" id="id130"></td>
+                            <td class="default" id="id131"></td>
+                            <td class="default" id="id132"></td>
+                            <td class="default" id="id133"></td>
+                            <td class="default" id="id134"></td>
+                            <td class="default" id="id135"></td>
+                            <td class="default" id="id136">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /Monthly Table -->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>

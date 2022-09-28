@@ -1,0 +1,14 @@
+.justify {
+    text-align: justify;
+}
+.centralize {
+    position: relative;
+    top: 50%;
+    transform: translateY(+40%);
+}
+.skills {
+    margin-top: 50px;
+}
+.skill-item {
+    margin-top: 50px;
+}

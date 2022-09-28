@@ -1,0 +1,68 @@
+.navbar-header {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.sitelogo-taze {
+    float: right !important;
+	position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.centralize {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100em;
+    text-align: center;
+}
+
+a.{color:aqua;}
+.thinner {
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.orange {
+    background-color: #ff6600;
+    margin-top: 25px;
+    color: #FFF;
+    font-weight: bold;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.form-group {
+    padding: 5px;
+    float: left;
+    width: 100%;
+}
+.namesurname_txt {
+    display: none;
+}
+.phone_txt {
+    display: none;
+}
+.byear_txt {
+    display: none;
+}
+.cancel-btn {
+    color: #000;
+    text-decoration: underline;
+    display: block;
+    padding-top: 25px;
+}
+.ok {
+    font-size: 50px;
+}
+    
+}
+.footer { 
+    position:fixed;
+    bottom:0;
+    margin-bottom: 10px;
+    float:left;
+    font-size: 8px;
+}

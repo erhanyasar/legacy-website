@@ -1,0 +1,33 @@
+.centered {
+    text-align: center;
+}
+
+.default {
+    background-color: greenyellow;
+}
+
+.left-aligned {
+    text-align: left;
+}
+
+.red {
+    color: red;
+}
+
+table {
+    width: 100% !important;
+    margin-top: 25px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-weight: 500;
+}
+
+td,
+th {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+td[id^="id"] {
+    background-color: greenyellow;
+}

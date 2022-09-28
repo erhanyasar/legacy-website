@@ -1,0 +1,21 @@
+{
+    "name": "UPatient",
+    "version": "1.0.0",
+    "description": "CrossOver UI/UX Position Challang",
+    "author": "Erhan Yaşar @ erhanyasar.com.tr",
+    "private": true,
+    "main": "./main.js",
+    "keywords": [
+    "CrossOver",
+    "UI/UX",
+    "Designer",
+    "Challange"
+  ],
+    "dependencies": {
+        "materialize-css": "^0.99.0"
+    },
+    "engines": {
+        "node": ">= 4.0.0",
+        "npm": ">= 3.0.0"
+    }
+}
