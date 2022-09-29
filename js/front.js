@@ -1,9 +1,8 @@
-if ($.cookie("theme_csspath")) {
+if ($.cookie("theme_csspath"))
     $('link#theme-stylesheet').attr("href", $.cookie("theme_csspath"));
-}
-if ($.cookie("theme_layout")) {
+
+if ($.cookie("theme_layout"))
     $('body').addClass($.cookie("theme_layout"));
-}
 
 $(function () {
 
@@ -19,39 +18,26 @@ $(function () {
 /* for demo purpose only - can be deleted */
 
 function demo() {
-
-    if ($.cookie("theme_csspath")) {
+    if ($.cookie("theme_csspath"))
         $('link#theme-stylesheet').attr("href", $.cookie("theme_csspath"));
-    }
 
     $("#colour").change(function () {
-
         if ($(this).val() !== '') {
-
             var theme_csspath = 'css/style.' + $(this).val() + '.css';
-
             $('link#theme-stylesheet').attr("href", theme_csspath);
-
             $.cookie("theme_csspath", theme_csspath, {expires: 365, path: '/'});
         }
-
         return false;
     });
 
     $("#layout").change(function () {
-
         if ($(this).val() !== '') {
-
             var theme_layout = $(this).val();
-
             $('body').removeClass('wide');
             $('body').removeClass('boxed');
-
             $('body').addClass(theme_layout);
-
             $.cookie("theme_layout", theme_layout, {expires: 365, path: '/'});
         }
-
         return false;
     });
 }
@@ -61,7 +47,6 @@ function demo() {
  *  =======================================*/
 
 function lightbox() {
-
     $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
         event.preventDefault();
         $(this).ekkoLightbox();
@@ -69,11 +54,8 @@ function lightbox() {
 }
 
 /* sliders */
-
 function sliders() {
     if ($('.owl-carousel').length) {
-
-
         $(".testimonials").owlCarousel({
             items: 4,
             itemsDesktopSmall: [1100, 3],
@@ -81,18 +63,12 @@ function sliders() {
             itemsMobile: [480, 1]
         });
     }
-
 }
 
 function map() {
-
     if ($('#map').length > 0) {
-
-
         function initMap() {
-
-            var location = new google.maps.LatLng(41.006584, 28.943529);
-
+            var location = new google.maps.LatLng(40.994670, 29.028582);
             var mapCanvas = document.getElementById('map');
             var mapOptions = {
                 center: location,
@@ -101,74 +77,49 @@ function map() {
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             }
             var map = new google.maps.Map(mapCanvas, mapOptions);
-
             var markerImage = 'img/marker.png';
-
             var marker = new google.maps.Marker({
                 position: location,
                 map: map,
                 icon: markerImage
             });
-
             var contentString = '<div class="info-window">' +
                     '<h3>Istanbul, Turkey</h3>' +
                     '<div class="info-content">' +
                     '<p>I live in Istanbul since I born and definitely suggest everyone to see whom not seen yet. It is up to your limits what you want to discover and you may surprised any minute what you are about to see here.</p>' +
                     '</div>' +
                     '</div>';
-
             var infowindow = new google.maps.InfoWindow({
                 content: contentString,
                 maxWidth: 400
             });
-
             marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
-
             var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
-
             map.set('styles', styles);
-
-
         }
-
         window.addEventListener('load', initMap);
     }
 }
 
-
-
 /* menu sliding */
-
 function menuSliding() {
-
-
     $('.dropdown').on('show.bs.dropdown', function (e) {
-
-        if ($(window).width() > 750) {
+        if ($(window).width() > 750)
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
-
-        }
-        else {
+        else
             $(this).find('.dropdown-menu').first().stop(true, true).show();
-        }
-    }
-
-    );
-    $('.dropdown').on('hide.bs.dropdown', function (e) {
-        if ($(window).width() > 750) {
-            $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
-        }
-        else {
-            $(this).find('.dropdown-menu').first().stop(true, true).hide();
-        }
     });
-
+    $('.dropdown').on('hide.bs.dropdown', function (e) {
+        if ($(window).width() > 750)
+            $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+        else
+            $(this).find('.dropdown-menu').first().stop(true, true).hide();
+    });
 }
 
 /* animations */
-
 function animations() {
     delayTime = 0;
     $('[data-animate]').css({opacity: '0'});
@@ -183,10 +134,10 @@ function animations() {
             //$(this).toggleClass($(this).data('animate'));
         });
     },
-            {
-                offset: '90%',
-                triggerOnce: true
-            });
+    {
+        offset: '90%',
+        triggerOnce: true
+    });
 
     $('[data-animate-hover]').hover(function () {
         $(this).css({opacity: 1});
@@ -201,89 +152,70 @@ function animations() {
 }
 
 function animationsSlider() {
-
     var delayTimeSlider = 400;
-
     $('.owl-item:not(.active) [data-animate-always]').each(function () {
-
         $(this).removeClass('animated');
         $(this).removeClass($(this).data('animate-always'));
         $(this).stop(true, true, true).css({opacity: 0});
 
     });
-
     $('.owl-item.active [data-animate-always]').each(function () {
         delayTimeSlider += 500;
-
         $(this).delay(delayTimeSlider).queue(function (next) {
             $(this).addClass('animated');
             $(this).addClass($(this).data('animate-always'));
-
             console.log($(this).data('animate-always'));
-
         });
     });
-
-
-
 }
 
 /* counters */
-
 function counters() {
-
     $('.counter').counterUp({
         delay: 10,
         time: 1000
     });
-
 }
 
 function utils() {
-
     /* tooltips */
-
     $('[data-toggle="tooltip"]').tooltip();
 
     /* click on the box activates the radio */
-
     $('#checkout').on('click', '.box.shipping-method, .box.payment-method', function (e) {
         var radio = $(this).find(':radio');
         radio.prop('checked', true);
     });
+
     /* click on the box activates the link in it */
-
     $('.box.clickable').on('click', function (e) {
-
         window.location = $(this).find('a').attr('href');
     });
+
     /* external links in new window*/
-
     $('.external').on('click', function (e) {
-
         e.preventDefault();
         window.open($(this).attr("href"));
     });
+
     /* animated scrolling */
-
     $('.scroll-to, .scroll-to-top').click(function (event) {
-
         var full_url = this.href;
         var parts = full_url.split("#");
         if (parts.length > 1) {
-
             scrollTo(full_url);
             event.preventDefault();
         }
     });
+
     function scrollTo(full_url) {
         var parts = full_url.split("#");
         var trgt = parts[1];
         var target_offset = $("#" + trgt).offset();
         var target_top = target_offset.top - 100;
-        if (target_top < 0) {
+
+        if (target_top < 0)
             target_top = 0;
-        }
 
         $('html, body').animate({
             scrollTop: target_top
@@ -292,12 +224,10 @@ function utils() {
 }
 
 /* product detail gallery */
-
 function productDetailGallery(confDetailSwitch) {
     $('.thumb:first').addClass('active');
     timer = setInterval(autoSwitch, confDetailSwitch);
     $(".thumb").click(function (e) {
-
         switchImage($(this));
         clearInterval(timer);
         timer = setInterval(autoSwitch, confDetailSwitch);
@@ -309,16 +239,15 @@ function productDetailGallery(confDetailSwitch) {
     }, function () {
         timer = setInterval(autoSwitch, confDetailSwitch);
     });
+
     function autoSwitch() {
         var nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb');
-        if (nextThumb.length == 0) {
+        if (nextThumb.length == 0)
             nextThumb = $('.thumb:first');
-        }
         switchImage(nextThumb);
     }
 
     function switchImage(thumb) {
-
         $('.thumb').removeClass('active');
         var bigUrl = thumb.attr('href');
         thumb.addClass('active');
@@ -327,7 +256,6 @@ function productDetailGallery(confDetailSwitch) {
 }
 
 /* product detail sizes */
-
 function productDetailSizes() {
     $('.sizes a').click(function (e) {
         e.preventDefault();
@@ -338,10 +266,8 @@ function productDetailSizes() {
     });
 }
 
-
 $.fn.alignElementsSameHeight = function () {
     $('.same-height-row').each(function () {
-
         var maxHeight = 0;
         var children = $(this).find('.same-height');
         children.height('auto');
@@ -353,7 +279,6 @@ $.fn.alignElementsSameHeight = function () {
             });
             children.innerHeight(maxHeight);
         }
-
         maxHeight = 0;
         children = $(this).find('.same-height-always');
         children.height('auto');
@@ -363,26 +288,20 @@ $.fn.alignElementsSameHeight = function () {
             }
         });
         children.innerHeight(maxHeight);
-
     });
 }
 
 $(window).on("load", function () {
-
     windowWidth = $(window).width();
-
     $(this).alignElementsSameHeight();
-
 });
+
 $(window).resize(function () {
-
     newWindowWidth = $(window).width();
-
     if (windowWidth !== newWindowWidth) {
         setTimeout(function () {
             $(this).alignElementsSameHeight();
         }, 205);
         windowWidth = newWindowWidth;
     }
-
 });
