@@ -133,11 +133,8 @@ function map() {
 
         }
 
-        google.maps.event.addDomListener(window, 'load', initMap);
-
-
+        window.addEventListener('load', initMap);
     }
-
 }
 
 
