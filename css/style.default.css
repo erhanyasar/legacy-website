@@ -1263,10 +1263,10 @@ p {
 a.text-primary:hover {
   color: #2074b1;
 }
-.text-secondary {
+.text-secondary_ {
   color: #ef5285;
 }
-a.text-secondary:hover {
+a.text-secondary_:hover {
   color: #ff7473;
 }
 .text-tertiary {
